@@ -16,6 +16,8 @@ Once one of your rig is rented, it automatically un-list all your non-rented min
 
 # Config
 
+in order for this software to work you must generate an `api key` and `secret`, this can be generated here: `https://www.miningrigrentals.com/account/apikey`, ONLY SELECT `Manage Rigs` permission.
+
 ```json
 {
   "api_key": "",

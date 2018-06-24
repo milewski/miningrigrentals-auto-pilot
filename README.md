@@ -77,3 +77,45 @@ in order for this software to work you must generate an `api key` and `secret`, 
 ```bash
 ./mmr-pilot.exe --config config.json
 ```
+
+# Miner config
+
+You will need to use your own miner in order to use this software, all you need to do is create a new folder inside the `miners` and setup a `config.json` inside, this is a sample of a config:
+
+```json
+{
+  "binaryPath": "./bin/ccminer.exe",
+  "algorithms": [
+    "xevan",
+    "lyra2rev2",
+    "c11",
+    "blake2s"
+  ],
+  "configFile": {
+    "algo": "{algorithm}",
+    "intensity": 20,
+    "url": "stratum+tcp://{url}:{port}",
+    "user": "{worker}",
+    "pass": "{password}"
+  },
+  "params": [
+    "-c",
+    "{configPath}"
+  ]
+}
+```
+
+here is a list of all the placeholders you can use to setup the miner config:
+
+`algorithm`, `url`, `port`, `worker`, `password`, `configPath`
+
+the params property will be given directly to your miner binary so the above configuration will output:
+
+```bash
+./bin/ccminer.exe -c ./temp/lyra2rev2.json
+```
+
+### Donation address
+
+BTC `3QJTxhufh7j5TnZ2fQJbQiX9VNuPuG5oS6`
+LTC `LhfsbV5iXnBzJYvRJXSDhE2fKtQCUMimAY`

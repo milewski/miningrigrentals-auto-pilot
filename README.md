@@ -75,7 +75,7 @@ in order for this software to work you must generate an `api key` and `secret`, 
 # Usage 
 
 ```bash
-./mmr-pilot.exe --config config.json
+./mmr-pilot.exe --config config.json --fee 10
 ```
 
 # Miner config
@@ -114,6 +114,10 @@ the params property will be given directly to your miner binary so the above con
 ```bash
 ./bin/ccminer.exe -c ./temp/lyra2rev2.json
 ```
+
+#### Note
+
+The current version has a small dev fee of 3% that will only ever run when your rig is not rented.
 
 ### Donation address
 
